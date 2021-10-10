@@ -56,18 +56,20 @@ header{
 #quiz{
     width:100%;
 }
+#quiz #type-hints{
+
+}#quiz #type-hints{
+    display:flex;
+    justify-content: center;
+}
+
 #quiz #quiz-options img{
-    width:5rem;
-    height:5rem;
+    width:6rem;
+    height:6rem;
     border-radius:4rem;
 }
-#quiz img{
-    border-radius: 5rem;
-    width:8rem;
-    height:8rem;
-}
 #quiz #quiz-options .right{
-    background: blue;
+    background: rgb(213, 126, 221);
     transform:translate(-1rem, -2rem);
     transition: transform .7s;
 }
@@ -75,156 +77,3 @@ header{
     grid-area:things;
     border:1px solid black;
 }
-
-/* #grass{
-    background:rgba(57, 214, 57,.5);
-    color:rgba(57, 214, 57, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#poison{
-    background:rgba(77, 0, 80,.5);
-    color:rgba(77, 0, 80, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#bug{
-    background:rgba(0, 119, 26,.5);
-    color:rgba(0, 119, 26, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#dark{
-    background:rgba(25, 25, 26,.5);
-    color:rgba(25, 25, 26, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#dragon{
-    background:rgba(0, 255, 234,.5);
-    color:rgba(0, 255, 234, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#electric{
-    background:rgba(217, 255, 0,.5);
-    color:rgba(217, 255, 0, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#fair{
-    background:rgba(255, 0, 157,.5);
-    color:rgba(255, 0, 157, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#fighting{
-    background:rgba(255, 72, 0,.5);
-    color:rgba(255, 72, 0, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#fire{
-    background:rgba(255, 0, 0,.5);
-    color:rgba(255, 0, 0, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#flying{
-    background:rgba(0, 97, 153,.5);
-    color:rgba(0, 97, 153, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#ghost{
-    background:rgba(183, 0, 255,.5);
-    color:rgba(183, 0, 255, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#ground{
-    background:rgba(158, 81, 36,.5);
-    color:rgba(158, 81, 36, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#ice{
-    background:rgba(177, 252, 255,.5);
-    color:rgba(177, 252, 255, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#normal{
-    background:rgba(129, 68, 88,.5);
-    color:rgba(129, 68, 88, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#psychic{
-    background:rgba(255, 62, 191,.5);
-    color:rgba(255, 62, 191, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#rock{
-    background:rgba(114, 41, 23,.5);
-    color:rgba(114, 41, 23, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#poison{
-    background:rgba(247, 0, 255,.5);
-    color:rgba(247, 0, 255, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#steel{
-    background:rgba(115, 131, 145,.5);
-    color:rgba(115, 131, 145, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-}
-#water{
-    background:rgba(53, 100, 255,.5);
-    color:rgba(53, 100, 255, 1);
-    height: 2rem;
-    width: 4rem;
-    border-radius:.5rem;
-
-} */
