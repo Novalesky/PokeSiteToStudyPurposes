@@ -20,17 +20,16 @@ main{
         'quiz things '
     ;
 }
-
 header{
     height:10%;
     width:100%;
     background: black;
 }
 
-#aboult-us{
+.aboult{
     grid-area: about;
 }
-#what-is{
+.about__content{
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -41,7 +40,7 @@ header{
     border:1px solid black;
 }
 
-#poke-quiz{
+.quiz{
     grid-area:quiz;
     
     display:flex;
@@ -51,24 +50,21 @@ header{
     gap:1rem;
     
     border:1px solid black;
-
-}
-#quiz{
     width:100%;
-}
-#quiz #type-hints{
 
-}#quiz #type-hints{
+}
+
+#quiz__content__type{
     display:flex;
     justify-content: center;
 }
 
-#quiz #quiz-options img{
+.quiz__content__option__img{
     width:6rem;
     height:6rem;
     border-radius:4rem;
 }
-#quiz #quiz-options .right{
+.quiz__content__option__img.right{
     background: rgb(213, 126, 221);
     transform:translate(-1rem, -2rem);
     transition: transform .7s;

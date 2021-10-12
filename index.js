@@ -1,9 +1,9 @@
 import getPokeInfo from './requisitions.js'
-const options_list = document.querySelectorAll('.option');
-const restart_button = document.getElementById('quiz-restart')
-const quiz_options = document.getElementById('quiz-options')
-let movement = document.getElementById('move-hints')
-let types = document.getElementById('type-hints')
+const options_list = document.querySelectorAll('.quiz__content__option__img');
+const restart_button = document.querySelector('#quiz__content__restart')
+const quiz_options = document.querySelector('#quiz__content__options')
+let movement = document.querySelector('#quiz__content__moves')
+let types = document.querySelector('#quiz__content__type')
 let quiz_answer
 let colorType =[
     {type:'water',
@@ -54,15 +54,8 @@ let colorPicker = (palet, type)=>{
         }
     }
 }
-let sortPokemon = async ()=>{
-    // buscando as informações da api
-    let {pokeData} = await getPokeInfo(randomNumber(1, 898));
-    let pokeMoves = pokeData.moves
-    let pokeTypes = pokeData.types
-    movement.innerHTML = ''
-    types.innerHTML = ''
-    pokeTypes.forEach(element =>{
-        
+let pickAndPrintPokeType = (array)=>{
+    array.forEach(element =>{
         let type = document.createElement('p')
         type.setAttribute('id', `${element.type.name}`)
         type.innerHTML = `
@@ -78,16 +71,16 @@ let sortPokemon = async ()=>{
         ${element.type.name}`
         types.appendChild(type)
     })
-    
+}
+
+let setMoves = (array)=>{    
     for(let i = 0; i<3; ++i ){
         
-        
-        console.log(pokeData)
-        if(pokeMoves.length != 0){
+        if(array.length != 0){
 
             let move = document.createElement('p')
             move.setAttribute('class' , 'moves')
-            move.innerText = `${pokeMoves[i].move.name}`
+            move.innerText = `${array[i].move.name}`
             movement.appendChild(move)
 
         }
@@ -96,7 +89,20 @@ let sortPokemon = async ()=>{
         }
     }
 
-   
+}
+
+
+let sortPokemon = async ()=>{
+    // buscando as informações da api
+    let {pokeData} = await getPokeInfo(randomNumber(1, 898));
+    let pokeMoves = pokeData.moves
+    let pokeTypes = pokeData.types
+    movement.innerHTML = ''
+    types.innerHTML = ''
+    
+    pickAndPrintPokeType(pokeTypes)
+    
+   setMoves(pokeMoves)
     
     // resetando e sorteando um pokemon
     options_list.forEach(element => {
