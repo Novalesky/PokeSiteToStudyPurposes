@@ -7,7 +7,7 @@
 
 }
 body{
-    height:150vh;
+    height:200vh;
     width:100%;
 }
 main{
@@ -53,9 +53,20 @@ header{
     width:100%;
 
 }
+#quiz__content{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 2rem;
+}
 
 #quiz__content__type{
     display:flex;
+    justify-content: center;
+}
+#quiz__content__moves{
+    display:flex;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -63,13 +74,98 @@ header{
     width:6rem;
     height:6rem;
     border-radius:4rem;
+    box-shadow: 2px 3px 20px -5px grey;
+}
+#quiz__content__restart{
+    transition-duration: .2s;
+    background:rgba(255, 255, 255, 0.2);
+    border: 1px solid grey;
+    border-radius: .5rem;
+    width: 4rem;
+    height:2rem;
+
+}
+#quiz__content__restart:hover{
+    background: rgb(231, 231, 231);
+    cursor:pointer;
 }
 .quiz__content__option__img.right{
-    background: rgb(213, 126, 221);
-    transform:translate(-1rem, -2rem);
+    box-shadow:3px 3px 5px -1px rgba(90, 247, 98, 1);
+    transform:translateY(-.5rem);
     transition: transform .7s;
 }
-#poke-things{
+.quiz__content__option__img.wrong{
+    box-shadow:3px 3px 5px -1px rgb(250, 126, 110);
+}
+
+
+#asideContent{
     grid-area:things;
     border:1px solid black;
+}
+
+#asideContent{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5rem;
+}
+#ranking{
+    display:flex;
+    flex-direction:row;
+    align-items: flex-end;
+    gap:.4rem;
+}
+.ranking__span{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: white;
+    
+    border-radius: 10rem;   
+}
+.ranking__span__voteConfirm{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background:rgb(255, 202, 77);
+    width: 0rem;
+    height: 0rem;
+    overflow: hidden;
+    z-index: -1;
+    transition: transform .2s, width .2s, height .2s;
+}
+
+.ranking__span__voteConfirm__confirmed{
+    transform: translateY(-110%);
+    width: 2rem;
+    height: 2rem;
+}
+
+#ranking__span__voteConfirm--check{
+    color: rgb(255, 216, 124);
+}
+
+.ranking__span img{
+    box-shadow:2px 2px 10px -8px black;
+    border-radius: 10rem;
+    position: relative;
+    z-index: 3;
+    
+
+}
+.ranking__span:nth-child(1) img{
+    width: 6rem;
+    height: 6rem;
+}
+.ranking__span:nth-child(2) img{
+    width: 7rem;
+    height: 7rem;
+}
+.ranking__span:nth-child(3) img{
+    width: 5rem;
+    height: 5rem;
 }

@@ -1,9 +1,14 @@
+
 import getPokeInfo from './requisitions.js'
+// import "./index.css"
 const options_list = document.querySelectorAll('.quiz__content__option__img');
 const restart_button = document.querySelector('#quiz__content__restart')
 const quiz_options = document.querySelector('#quiz__content__options')
 let movement = document.querySelector('#quiz__content__moves')
 let types = document.querySelector('#quiz__content__type')
+const ranking = document.querySelector('#ranking')
+const list = document.querySelectorAll('.ranking__span__voteConfirm')
+console.log(options_list)
 let quiz_answer
 let colorType =[
     {type:'water',
@@ -107,7 +112,8 @@ let sortPokemon = async ()=>{
     // resetando e sorteando um pokemon
     options_list.forEach(element => {
         element.setAttribute('src', '')
-        element.classList.remove('right')});
+        element.classList.remove('right')
+        element.classList.remove('wrong')});
     quiz_answer = options_list[randomNumber(0, 3)]
     quiz_answer.setAttribute('src', pokeData.sprites.front_default);
     
@@ -129,13 +135,44 @@ sortPokemon();
 // resetando o game
 restart_button.addEventListener('click', async event => {
     sortPokemon()
+    
+})
+// fazendo a tentativa de acertar
+quiz_options.addEventListener('click', event =>{
+    
+        let getProperty
+        let answer_verify = event.target.id === quiz_answer.id
+        options_list.forEach(element=>{
+            if(element.classList.contains('right')){
+                return getProperty = -1
+            }
+        })
+            
+            if(answer_verify && !getProperty){
+                event.target.classList.add('right')
+                setTimeout(sortPokemon, 2000 )
+                
+                }
+            else if(!answer_verify && !getProperty) {
+                event.target.classList.add('wrong')
+                quiz_answer.classList.add('right')
+                setTimeout(sortPokemon, 2000)    
+                
+            }
+            
+    
 })
 
-// fazendo a tentativa de acertar
-quiz_options.addEventListener('click', event=>{
-    let answer_verify = event.target.id === quiz_answer.id
-    if(answer_verify){
-        event.target.classList.add('right')
-        console.log('acertou')
+
+let vote = (event) => {
+    let votated = event.target.nextElementSibling
+    let rate = event.target.nodeName == 'IMG'
+    if(rate){
+       list.forEach(element =>{
+           element.classList.remove('ranking__span__voteConfirm__confirmed')
+           votated.classList.add('ranking__span__voteConfirm__confirmed')
+       })
+       
     }
-})
+}
+ranking.addEventListener('click', vote)

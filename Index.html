@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css" type="text/css">
+    <link href='https://css.gg/check.css' rel='stylesheet'>
     <title>E-study</title>
 </head>
 
@@ -42,27 +43,29 @@
                 <div id="quiz__content__type"></div>
                 <div id="quiz__content__moves"></div>
                 <div id="quiz__content__options">
-                <span><img id="1"class="quiz__content__option__img" src="" alt="pokemon"></span>
-                <span><img id="2"class="quiz__content__option__img" src="" alt="pokemon"></span>
-                <span><img id="3"class="quiz__content__option__img" src="" alt="pokemon"></span>
-                <span><img id="4"class="quiz__content__option__img" src="" alt="pokemon"></span>
+                <span><img id="1" class="quiz__content__option__img" src="" alt="pokemon"></span>
+                <span><img id="2" class="quiz__content__option__img" src="" alt="pokemon"></span>
+                <span><img id="3" class="quiz__content__option__img" src="" alt="pokemon"></span>
+                <span><img id="4" class="quiz__content__option__img" src="" alt="pokemon"></span>
                 </div>
                 <button id="quiz__content__restart" type="button">resetar</button>
             </div>
         </section>
-        <aside id="poke-things">
+        <aside id="asideContent">
             <h1>Pokeranking</h1>
             <div id="ranking">
-                <span><img id="second"src="" alt="pokemon 2"></span>
-                <span><img id="first"src="" alt="pokemon 1"></span>
-                <span><img id="third"src="" alt="pokemon 3"></span>  
-            </div>
-            <div id="rate">
-                <img src="" alt="pokemon">
-                <form action="">
-                    <input type="text" name="" id="input-rate">
-                    <button type="submit">Votar</button>
-                </form>
+                <span class="ranking__span">
+                    <img id="bulbasaur"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="pokemon 2">
+                    <div class="ranking__span__voteConfirm "><i id="ranking__span__voteConfirm--check" class="gg-check"></i></div>
+                    <p>2º</p></span>
+                <span class="ranking__span">
+                    <img id="charmander"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="pokemon 1">
+                    <div class="ranking__span__voteConfirm"><i id="ranking__span__voteConfirm--check" class="gg-check"></i></div>
+                    <p>1º</p></span>
+                <span class="ranking__span">
+                    <img id="squirtle"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="pokemon 3">
+                    <div class="ranking__span__voteConfirm"><i id="ranking__span__voteConfirm--check" class="gg-check"></i></div>
+                    <p>3º</p></span>  
             </div>
         </aside>
     </main>
